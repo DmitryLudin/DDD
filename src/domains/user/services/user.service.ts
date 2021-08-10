@@ -2,7 +2,7 @@ import { userStore, UserStore } from "../stores/user.store";
 import { UserModel } from "../models/user.model";
 import { userTransport, UserTransport } from "../transports/user.transport";
 
-class UserService {
+export class UserService {
   store: UserStore;
   transport: UserTransport;
 

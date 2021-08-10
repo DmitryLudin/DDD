@@ -5,7 +5,7 @@ import {
   getPostEditService
 } from "../../../domains/selectors/post-edit.selector";
 import { useServiceSelector } from "../../../../../hooks/index";
-import { SyntheticEvent, useCallback } from "react";
+import React, { ChangeEvent, useCallback } from "react";
 import { TPostEditFormKeys } from "../../../types/post-edit.type";
 
 type TPostEditFormInputProps = {
@@ -20,7 +20,7 @@ export const PostEditFormInput = observer(
     );
 
     const handleChangePost = useCallback(
-      (e: SyntheticEvent<HTMLInputElement>) => {
+      (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         postEditService.handleChangeForm(fieldName, e.currentTarget.value);
       },
       [postEditService, fieldName]

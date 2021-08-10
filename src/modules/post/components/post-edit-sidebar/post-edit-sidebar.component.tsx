@@ -10,7 +10,7 @@ import {
 import { PostEditForm } from "./post-edit-form/post-edit-form.component";
 import { PostSidebarComments } from "./post-sidebar-comments/post-sidebar-comments";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   drawer: {
     width: 540,
     flexShrink: 0

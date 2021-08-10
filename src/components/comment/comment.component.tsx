@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { CommentModel } from "../../domains/comment/models/comment.model";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   fonts: {
     fontWeight: "bold"
   },

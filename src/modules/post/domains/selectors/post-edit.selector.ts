@@ -16,7 +16,9 @@ export const getSelectedPostValue = <T extends keyof PostModel>(key: T) => (
 ) => {
   const post = getSelectedPost(services);
 
-  if (post) return post[key];
+  if (!post) return;
+
+  return post[key];
 };
 
 export const getIsDisplayedPostEditing = (services: TServices) =>

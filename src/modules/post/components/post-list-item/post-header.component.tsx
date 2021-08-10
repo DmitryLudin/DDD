@@ -13,7 +13,7 @@ import { useServiceSelector } from "../../../../hooks/index";
 import { getPostEditService } from "../../domains/selectors/post-edit.selector";
 import { getInitialsOfName } from "../../utils/get-initials-of-name";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   avatar: {
     backgroundColor: red[500]
   }

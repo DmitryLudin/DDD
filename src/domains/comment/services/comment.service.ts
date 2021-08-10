@@ -5,7 +5,7 @@ import {
   CommentTransport
 } from "../transports/comment.transport";
 
-class CommentService {
+export class CommentService {
   store: CommentStore;
   transport: CommentTransport;
 

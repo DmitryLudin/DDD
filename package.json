@@ -1,39 +1,68 @@
 {
-  "name": "test-services",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.tsx",
-  "dependencies": {
-    "@material-ui/core": "4.12.3",
-    "@material-ui/icons": "4.11.2",
-    "@material-ui/styles": "4.11.4",
-    "@material-ui/system": "4.12.1",
-    "@material-ui/types": "5.1.0",
-    "@material-ui/utils": "4.11.2",
-    "domains": "1.1.4",
-    "fetch-base": "1.1.12",
-    "mobx": "6.3.2",
-    "mobx-react-lite": "3.2.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-scripts": "4.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "17.0.0",
-    "@types/react-dom": "17.0.0",
-    "typescript": "4.1.3"
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "ddd-example",
+  "author": "Dmitry Ludin",
+  "module": "dist/ddd-example.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/ddd-example.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/ddd-example.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^5.0.2",
+    "@types/react": "^17.0.16",
+    "@types/react-dom": "^17.0.9",
+    "husky": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "size-limit": "^5.0.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "fetch-base": "^1.1.12",
+    "mobx": "^6.3.2",
+    "mobx-react-lite": "^3.2.0"
+  }
 }

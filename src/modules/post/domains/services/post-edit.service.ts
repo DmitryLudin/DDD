@@ -8,7 +8,7 @@ import {
 } from "../../types/post-edit.type";
 import { PostEditStore, postEditStore } from "../stores/post-edit.store";
 
-class PostEditService {
+export class PostEditService {
   store: PostEditStore;
   private postService: PostService;
 

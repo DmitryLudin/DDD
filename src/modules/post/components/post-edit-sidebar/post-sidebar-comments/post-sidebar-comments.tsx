@@ -5,7 +5,6 @@ import { Comment } from "../../../../../components/comment/comment.component";
 import { getPostComments } from "../../../../../domains/comment/selectors/comment.selector";
 import { useServiceSelector } from "../../../../../hooks/index";
 import { getSelectedPostValue } from "../../../domains/selectors/post-edit.selector";
-import { getInitialsOfName } from "../../../utils/get-initials-of-name";
 
 const useStyles = makeStyles((theme) => ({
   root: {

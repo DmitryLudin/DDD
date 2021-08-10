@@ -5,7 +5,7 @@ import { PostHeader } from "./post-header.component";
 import { PostContent } from "./post-content.component";
 import { PostFooter } from "./post-footer.component";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 345
   }

@@ -31,7 +31,7 @@ export const PostSidebarComments = observer(() => {
       <Grid item>
         <List className={classes.root}>
           {comments.map((comment) => (
-            <Comment {...comment} />
+            <Comment key={comment.id} {...comment} />
           ))}
         </List>
       </Grid>

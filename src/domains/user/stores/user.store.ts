@@ -12,7 +12,7 @@ const initialUserStoreState: TUserStoreState = {
 
 export class UserStore extends BaseStore<TUserStoreState> {
   getUserById(userId: number) {
-    return this._state.users.find((user) => user.id === userId);
+    return this.state.users.find((user) => user.id === userId);
   }
 }
 

@@ -12,7 +12,7 @@ const initialCommentStoreState: TCommentStoreState = {
 
 export class CommentStore extends BaseStore<TCommentStoreState> {
   getCommentsByPostId(postId: number) {
-    return this._state.comments.filter((comment) => comment.postId === postId);
+    return this.state.comments.filter((comment) => comment.postId === postId);
   }
 }
 

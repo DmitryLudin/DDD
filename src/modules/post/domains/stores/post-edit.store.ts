@@ -1,3 +1,4 @@
+import { action } from "mobx";
 import { BaseStore } from "../../../../domains/base/base.store";
 import { PostModel } from "../.././../../domains/post/models/post.model";
 import {
@@ -21,11 +22,12 @@ const initialPostEditStoreState: TPostEditStoreState = {
 };
 
 export class PostEditStore extends BaseStore<TPostEditStoreState> {
+  @action
   updateForm<T extends TPostEditFormKeys>(
     formFieldKey: T,
     formFieldValue: TPostEditFormState[T]
   ) {
-    this._state.form[formFieldKey] = formFieldValue;
+    this.state.form[formFieldKey] = formFieldValue;
   }
 }
 

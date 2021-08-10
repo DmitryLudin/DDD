@@ -1,3 +1,4 @@
+import { action } from "mobx";
 import { TStatus } from "../../../types/base-status.type";
 import { BaseStore } from "../../base/base.store";
 import { PostModel } from "../models/post.model";
@@ -23,11 +24,12 @@ const initialPostStoreState: TPostStoreState = {
 
 export class PostStore extends BaseStore<TPostStoreState> {
   getPost(postId: number) {
-    return this._state.posts[postId];
+    return this.state.posts[postId];
   }
 
+  @action
   updatePost(postId: number, value: PostModel) {
-    this._state.posts[postId] = value;
+    this.state.posts[postId] = value;
   }
 }
 

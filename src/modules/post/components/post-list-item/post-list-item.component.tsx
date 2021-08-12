@@ -1,6 +1,6 @@
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
-import React, { memo } from "react";
+import { memo } from "react";
 import { PostHeader } from "./post-header.component";
 import { PostContent } from "./post-content.component";
 import { PostFooter } from "./post-footer.component";
@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
 
 export const PostListItem = memo(({ postId }: { postId: number }) => {
   const classes = useStyles();
-
+  
   return (
     <Card className={classes.root}>
       <PostHeader postId={postId} />

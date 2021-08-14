@@ -1,21 +1,13 @@
-import React, { createContext, ReactNode } from "react";
-import { CommentService } from "../../domains/comment/services/comment.service";
+import { createContext, ReactNode } from "react";
 import { userService, postService, commentService } from "../../domains/index";
-import { PostService } from "../../domains/post/services/post.service";
-import { UserService } from "../../domains/user/services/user.service";
-import { PostEditService, postEditService } from "../../modules/post/domains/services/post-edit.service";
+import { postEditService } from "../../modules/post/domains/services/post-edit.service";
 import { TServices } from "./root-services.type";
 
-export const rootServices: {
-  postService: PostService,
-  userSerivce: UserService,
-  commentService: CommentService,
-  postEditService: PostEditService
-} = {
+export const rootServices = {
   postService: postService,
   userSerivce: userService,
   commentService: commentService,
-  postEditService: postEditService
+  postEditService: postEditService,
 };
 
 export const ServiceContext = createContext<TServices>(rootServices);
